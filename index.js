@@ -4,7 +4,7 @@ const { token } = require('./config.json');
 
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
-client.commands = new Collection(); 
+client.commands = new Collection();
 const commandFiles = fs
   .readdirSync('./commands')
   .filter((file) => file.endsWith('.js'));
@@ -37,6 +37,5 @@ client.on('interactionCreate', async (interaction) => {
 });
 
 client.login(token);
-
 
 // 922498384470884384
